@@ -1,0 +1,67 @@
+body {
+    padding: 1rem 3rem;
+    margin: 0;
+}
+
+
+nav {
+
+    align-items: center;
+    margin: 0;
+
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.dark {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    
+}
+
+.title {
+    font-size: 1.5rem;
+    color: aqua;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+
+    list-style: none;
+}
+
+
+a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+.active {
+    color: aqua;
+}
+
+button {
+    font-size: 1.5rem;
+
+    border: 2px solid aqua;
+    background-color: white;
+
+    color: aqua;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    transition: all 400ms ease;
+
+
+}
+
+button:hover {
+    box-shadow: 0 0 4px aqua;
+    scale: 1.005;
+}
