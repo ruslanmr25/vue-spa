@@ -1,0 +1,17 @@
+[
+  {
+    "pageTitle": "Home Page",
+    "content": "Welcome to the wonderful world of Vue",
+    "published": true
+  },
+  {
+    "pageTitle": "About page",
+    "content": "Welcome to the wonderful world of Vue",
+    "published": true
+  },
+  {
+    "pageTitle": "Contact page",
+    "content": "Welcome to the wonderful world of Vue",
+    "published": true
+  }
+]

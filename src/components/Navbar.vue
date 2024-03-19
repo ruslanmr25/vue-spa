@@ -3,8 +3,7 @@
           <div class="title">Future</div>
           <ul>
                <li v-for="(link, index) in links" :key="index">
-                    <links :link="link" :isActive="index == activePage" 
-                         @click.prevent="activatePage(index)">
+                    <links :link="link" :isActive="index == activePage" @click.prevent="activatePage(index)">
                     </links>
                </li>
           </ul>
@@ -24,6 +23,10 @@ export default {
      components: {
           links
      },
+     created() {
+          this.applyThemeSetting();
+     },
+
      props: ["activePage", "links", 'activatePage'],
      computed: {
           navbarClasses() {
@@ -32,16 +35,29 @@ export default {
                };
           },
      },
+
      methods: {
           changeTheme() {
                this.darkStyle = !this.darkStyle;
+               this.setTheme();
           },
+
+          setTheme() {
+               localStorage.setItem('darkStyle', this.darkStyle);
+          },
+
+          applyThemeSetting() {
+               let darkStyle = localStorage.getItem('darkStyle') ?? false;
+               this.dark = darkStyle
+
+
+          }
      },
      data() {
           return {
                darkStyle: false,
           };
-     },
+     }
 }
 
 

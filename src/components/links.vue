@@ -1,9 +1,13 @@
 <template>
-     <a :href="link.link" v-bind:class="F ">
-          {{ link.text }}
+
+     <li>
+          <a :href="link.link" v-bind:class="activeClasses">
+               {{ link.text }}
 
 
-     </a>
+          </a>
+
+     </li>
 </template>
 
 
@@ -22,7 +26,7 @@ export default {
      },
 
      props: [
-          "link", 'isActive',
+          'isActive', 'link'
      ]
 }
 
