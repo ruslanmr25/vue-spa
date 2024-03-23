@@ -1,8 +1,13 @@
 <template>
 
-     <navbar :active-page="activePage" :links="links" :activate-page="(index) => activePage = index"></navbar>
+     <navbar  :links="links" :activate-page="(index) => activePage = index"></navbar>
+
+
+     <router-view>
+
+     </router-view>
      <!-- <page-viewer :page="pages[activePage]"></page-viewer> -->
-     <create-page @pageCreated="pageCreated"></create-page>
+     <!-- <create-page @pageCreated="pageCreated"></create-page> -->
 </template>
 
 <script>

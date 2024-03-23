@@ -1,13 +1,15 @@
 <template>
 
      <li>
-          <a :href="link.link" v-bind:class="activeClasses">
+          <router-link :to="`/${index}`"
+          :active-class="active"
+          >
                {{ link.text }}
-
-
-          </a>
-
+          </router-link>
      </li>
+
+
+
 </template>
 
 
@@ -15,18 +17,11 @@
 
 <script>
 
+
 export default {
-
-     computed: {
-          activeClasses() {
-               return {
-                    active: this.isActive
-               }
-          }
-     },
-
+     
      props: [
-          'isActive', 'link'
+          'index', 'link'
      ]
 }
 

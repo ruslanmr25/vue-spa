@@ -3,7 +3,8 @@
           <div class="title">Future</div>
           <ul>
                <li v-for="(link, index) in links" :key="index">
-                    <links :link="link" :isActive="index == activePage" @click.prevent="activatePage(index)">
+
+                    <links :link="link" :index="index" >
                     </links>
                </li>
           </ul>
@@ -27,7 +28,7 @@ export default {
           this.applyThemeSetting();
      },
 
-     props: ["activePage", "links", 'activatePage'],
+     props: [ "links", ],
      computed: {
           navbarClasses() {
                return {
